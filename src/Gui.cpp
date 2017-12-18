@@ -73,7 +73,7 @@ namespace ofxImGui
 	}
 
 	//--------------------------------------------------------------
-	GLuint Gui::loadPixels(string imagePath)
+	GLuint Gui::loadPixels(std::string imagePath)
 	{
 		if (!engine) return -1;
 		ofPixels pixels;
@@ -89,13 +89,13 @@ namespace ofxImGui
 	}
 
 	//--------------------------------------------------------------
-	GLuint Gui::loadImage(string imagePath)
+	GLuint Gui::loadImage(std::string imagePath)
 	{
 		return loadPixels(imagePath);
 	}
 
 	//--------------------------------------------------------------
-	GLuint Gui::loadTexture(string imagePath)
+	GLuint Gui::loadTexture(std::string imagePath)
 	{
 		ofDisableArbTex();
 		ofTexture* texture = new ofTexture();
@@ -106,7 +106,7 @@ namespace ofxImGui
 	}
 
 	//--------------------------------------------------------------
-	GLuint Gui::loadTexture(ofTexture& texture, string imagePath)
+	GLuint Gui::loadTexture(ofTexture& texture, std::string imagePath)
 	{
 		bool isUsingArb = ofGetUsingArbTex();
 		if (isUsingArb)
